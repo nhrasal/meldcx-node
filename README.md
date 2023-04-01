@@ -37,7 +37,7 @@ $ npm install or yarn install
 ```bash
 # development
 $ npm start or  yarn start
-
+- app running 3000 port or your configure port like: http://localhost:300
 ```
 
 ## Test
@@ -49,31 +49,18 @@ $ npm test or yarn run test
 
 ## Description
 
-1. The API Server should implement the following HTTP REST API endpoints:
-   a. “POST /files” - this endpoint will be used to upload new files. It should accept
-   “multipart/form-data” requests and return a response in JSON format with the
-   following attributes: “publicKey”, “privateKey”.
-   b. “GET /files/:publicKey” - this endpoint will be used to download existing files. It
-   should accept “publicKey” as a request parameter and return a response stream
-   with a MIME type representing the actual file format.
-   c. “DELETE /files/:privateKey” - this endpoint will be used to remove existing files.
-   It should accept “privateKey” as a request parameter and return a response in
-   JSON format confirming the file removal.
+- “POST /files” - this endpoint will be used to upload new files.It will response publicKey and privateKey.
+- “GET /files/:publicKey” - this endpoint will be used to download existing files. It
+  should accept “publicKey” as a request parameter and return a response stream
+  with a MIME type representing the actual file format.
 
-2. All the file access functionality should be implemented as a separate component
-   a. This component should encapsulate all the internal file processing details and
-   provide a simple interface for all the actions.
-   b. The default implementation should work with local files located inside a root
-   folder defined in the “FOLDER” environment variable.
-   c. It should be possible to implement other storage providers connected to the
-   popular cloud APIs using the same interface. Examples of such providers:
-   Google Cloud Storage, Microsoft Azure Storage or AWS Cloud Storage.
-3. The API Server should implement configurable daily download and upload limits for the
-   network traffic from the same IP address
-4. The API Server should have an internal job to cleanup uploaded files after configurable
-   period of inactivity
-5. All the HTTP REST API endpoints should be covered by integration tests
-6. All the individual component methods should be covered by unit tests
+- “DELETE /files/:privateKey” - this endpoint will be used to remove existing files.
+  It should accept “privateKey” as a request parameter and return a response in
+  JSON format confirming the file removal
+- Add AWS SDK for AWS Cloud Storage file upload and remove function.
+- Add Node cron for to cleanup uploaded files after configurable
+  period of inactivity.
+- Add Jest JavaScript Testing Framework for integration testing in **tets** directory
 
 ## Stay in touch
 
