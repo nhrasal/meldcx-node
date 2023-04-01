@@ -1,0 +1,8 @@
+node_modules
+coverage
+# jest.config.js
+todo.txt
+dist
+.env
+.DS_Store
+.vscode/
