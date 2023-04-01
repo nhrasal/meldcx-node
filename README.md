@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://expressjs.com" target="blank"><img src="https://expressjs.com/images/favicon.png" width="200" alt="ExpressJs" /></a>
+  <a href="https://expressjs.com" target="blank"><img src="https://expressjs.com/images/favicon.png" width="50" height="50" alt="ExpressJs" /></a>
 </p>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a>Fast, unopinionated, minimalist web framework for Node.js</p>
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> Fast, unopinionated, minimalist web framework for Node.js</p>
     <p align="center">
 
 ## Add information or configure your .env file on root directory
