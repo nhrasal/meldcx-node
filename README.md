@@ -7,24 +7,24 @@
 
 ## Add information or configure your .env file on root directory
 
-PORT=3000
-FOLDER=files
-DOWNLOAD_LIMIT_PER_DAY=3
-UPLOAD_LIMIT_PER_DAY=3
-PROVIDER=local
+- PORT=3000
+- FOLDER=files
+- DOWNLOAD_LIMIT_PER_DAY=3
+- UPLOAD_LIMIT_PER_DAY=3
+- PROVIDER=local
 
 # file server configuration into .env file
 
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_REGION=
-AWS_BUCKET_NAME=
-AWS_PREFIX_URL=
-AWS_PREFIX_URL_REMOVE=
+- AWS_ACCESS_KEY_ID=
+- AWS_SECRET_ACCESS_KEY=
+- AWS_REGION=
+- AWS_BUCKET_NAME=
+- AWS_PREFIX_URL=
+- AWS_PREFIX_URL_REMOVE=
 
 # data cleaning period in day into .env file
 
-CLEANING_PERIOD=1
+- CLEANING_PERIOD=1
 
 ## Installation
 
