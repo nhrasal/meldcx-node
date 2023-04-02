@@ -1,5 +1,5 @@
 {
-    "name": "vercel-typescript-express-api",
+    "name": "file-sharing-api",
     "version": 2,
     "public": true,
     "builds": [
