@@ -16,4 +16,4 @@ export const FileUpload = multer({
       cb(null, fileName);
     },
   }),
-}).single("file");
+});

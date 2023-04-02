@@ -21,6 +21,7 @@ export interface IFile {
 
 export const FileController = {
   async storeFiles(req: Request, res: Response) {
+    console.log(req.file);
     if (!req.file) {
       res.status(400).send("No file uploaded");
       return;
