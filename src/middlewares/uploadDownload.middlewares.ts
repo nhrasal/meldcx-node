@@ -5,6 +5,8 @@ const downloadLimits = new Map();
 const uploadLimits = new Map();
 
 export const Middleware = (req: Request, res: Response, next: NextFunction) => {
+  const route = req.url.split("/");
+  if (!route.includes("files")) return next();
   const ip = req.ip;
   const today = new Date().toISOString().slice(0, 10);
   const downloadCount = downloadLimits.get(`${ip}-${today}`) || 0;
