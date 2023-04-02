@@ -21,9 +21,8 @@ export interface IFile {
 
 export const FileController = {
   async storeFiles(req: Request, res: Response) {
-    console.log(req.file);
     if (!req.file) {
-      res.status(400).send("No file uploaded");
+      res.status(500).send("No file uploaded");
       return;
     }
     const publicKey = crypto.randomBytes(20).toString("hex");
@@ -81,6 +80,7 @@ export const FileController = {
           message: "File not found!",
         });
       }
+      FileService.readUpdateFile(publicKey);
       const fileStream = await fs.createReadStream(filePath);
       res.setHeader("Content-Type", findFile.mimeType);
       return fileStream.pipe(res);
@@ -91,10 +91,10 @@ export const FileController = {
 
   async removeFile(req: Request, res: Response) {
     const privateKey = req.params.privateKey;
-    const findFile = FileService.findFilePrivateKey(privateKey);
+    const findFile = await FileService.findFilePrivateKey(privateKey);
 
     if (!findFile)
-      return res.status(500).json({
+      return res.status(404).json({
         success: false,
         message: "File not found",
       });
