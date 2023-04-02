@@ -4,12 +4,13 @@ import * as FS from "fs";
 import { ENV } from "./ENV.config";
 import swaggerUi from "swagger-ui-express";
 import FileRouter from "./routes";
-import { swaggerSpec } from "./utils";
+import { isInvalidEnvConfigured, swaggerSpec } from "./utils";
 import { Middleware } from "./middlewares/uploadDownload.middlewares";
 
 const app: Application = express();
 
-if (!ENV.PORT) {
+if (isInvalidEnvConfigured()) {
+  console.log("🚀 Please configured your .env file and given variable");
   process.exit(1);
 }
 

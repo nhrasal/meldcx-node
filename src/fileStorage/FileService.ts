@@ -61,17 +61,17 @@ export const FileService = {
     const files = this.getFiles();
 
     const now = new Date();
-    const inactiveTime = +ENV.CLEANING_PERIOD * 24 * 60 * 60 * 1000; // convert days to milliseconds
+    const inactiveTime = +ENV.CLEANING_PERIOD_IN_DAY * 24 * 60 * 60 * 1000; // convert days to milliseconds
     files.forEach((file: IFile) => {
       if (file.uploadType === "local") {
         const stats = fs.statSync(file.path);
         // const lastModified = new Date(stats.mtime);
         const lastModified = new Date(file?.updatedAt || file.createdAt);
         const timeDiff = now.getTime() - lastModified.getTime();
-        console.log(
-          "🚀 ~ file: FileService.ts:56 ~ files.forEach ~ timeDiff:",
-          timeDiff
-        );
+        // console.log(
+        //   "🚀 ~ file: FileService.ts:56 ~ files.forEach ~ timeDiff:",
+        //   timeDiff
+        // );
         if (timeDiff > inactiveTime) {
           FileService.removeFile(file.privateKey);
           fs.unlinkSync(file.path);

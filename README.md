@@ -24,7 +24,7 @@
 
 # data cleaning period in day into .env file
 
-- CLEANING_PERIOD=1
+- CLEANING_PERIOD_IN_DAY=1
 
 ## Installation
 

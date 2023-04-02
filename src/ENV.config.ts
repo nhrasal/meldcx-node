@@ -9,7 +9,7 @@ export const ENV = {
   UPLOAD_LIMIT_PER_DAY: process.env.UPLOAD_LIMIT_PER_DAY || 20,
   PROVIDER: process.env.PROVIDER || "local",
 
-  CLEANING_PERIOD: process.env.CLEANING_PERIOD || 1,
+  CLEANING_PERIOD_IN_DAY: process.env.CLEANING_PERIOD_IN_DAY || 1,
 
   // aws
   AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
