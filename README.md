@@ -60,7 +60,11 @@ $ npm test or yarn run test
 - Add AWS SDK for AWS Cloud Storage file upload and remove function.
 - Add Node cron for to cleanup uploaded files after configurable
   period of inactivity.
-- Add Jest JavaScript Testing Framework for integration testing in **tets** directory
+- Add Jest JavaScript Testing Framework for unit and integration test
+- Daily download and upload limits for the network traffic from the same IP address implemented by configurable variable from env
+- Add AWS SDK for AWS Cloud Storage file upload and remove function.
+- Add Node cron to clean up uploaded files after a configurable period of inactivity and env variable CLEANING_PERIOD_IN_DAY 
+- Add Jest JavaScript Testing Framework for unit and  integration testing
 
 ## Stay in touch
 
